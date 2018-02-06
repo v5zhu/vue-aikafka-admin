@@ -3,7 +3,6 @@ import _ from 'underscore'
 // import { string } from 'utils/'
 import libs from './lib.js'
 import cps from './component.js'
-import mixins from './mixin'
 import plugins from './plugin'
 
 // console.log(plugins);
@@ -16,8 +15,6 @@ import plugins from './plugin'
  */
 Vue.use({
   install (Vue, options) {
-    Vue.mixin(mixins)
-
     // 注册第三方库
     _.each(libs, (item, key) => {
       Vue.prototype['$$' + key] = item
