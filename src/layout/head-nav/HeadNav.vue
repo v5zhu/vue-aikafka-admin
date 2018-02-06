@@ -2,18 +2,18 @@
   <div>
 
     <header class="head-nav">
-      <el-row>
+      <el-row class="head-nav-title">
         <el-col :span="4" class='logo-container'>&nbsp;
         </el-col>
-        <el-col :span="16">
-          <el-menu theme="dark" :default-active="$store.state.router.headerCurRouter" class="el-menu-demo"
+        <el-col :span="16" class="head-nav-title">
+          <el-menu theme="light" :default-active="$store.state.router.headerCurRouter" class="el-menu-demo"
                    mode="horizontal" unique-opened router>
             <!-- v-if='!item.hidden && (($store.state.user.userinfo.access_status===1 && $store.state.user.userinfo.web_routers[item.path]) || $store.state.user.userinfo.access_status!==1)' -->
-            <el-menu-item
-              v-for='(item,index) in $router.options.routes'
-              :index="item.path"
-              :key='item.path'
-              v-if='!item.hidden && (($store.state.user.userinfo.access_status===1 && $store.state.user.userinfo.web_routers[item.path]) || $store.state.user.userinfo.access_status!==1)'>
+            <el-menu-item class="el-menu-item"
+                          v-for='(item,index) in $router.options.routes'
+                          :index="item.path"
+                          :key='item.path'
+                          v-if='!item.hidden && (($store.state.user.userinfo.access_status===1 && $store.state.user.userinfo.web_routers[item.path]) || $store.state.user.userinfo.access_status!==1)'>
               {{item.name}}<!-- {{item.path}} -->
             </el-menu-item>
           </el-menu>
@@ -26,7 +26,7 @@
                           @command='setDialogInfo'>
                             <span class="el-dropdown-link">
                                <img src="../../assets/logo-sm.png" style="border-radius: 50%" class='logo' alt="">
-                                <!--<i class="el-icon-caret-bottom el-icon&#45;&#45;right"></i>-->
+                              <!--<i class="el-icon-caret-bottom el-icon&#45;&#45;right"></i>-->
                             </span>
                             <el-dropdown-menu slot="dropdown">
                                 <el-dropdown-item command='info'>修改信息</el-dropdown-item>
@@ -144,15 +144,22 @@
 </script>
 
 <style scoped lang='less'>
-  .logo-container {
-    height: 60px;
+  .logo-container, .head-nav-title {
+    height: 40px;
   }
 
   .logo {
-    height: 50px;
+    height: 30px;
     width: auto;
     margin-left: 10px;
     margin-top: 5px;
+  }
+
+  .el-menu-item {
+    /*调整header-nav的高度和字体*/
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
   }
 
   .fa-user {
@@ -163,14 +170,14 @@
 
   .head-nav {
     width: 100%;
-    height: 60px;
-    background: #324057;
+    height: 40px;
+    background: #eef1f6;
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 99;
     color: #FFF;
-    border-bottom: 1px solid #1F2D3D;
+    /*border-bottom: 1px solid #1F2D3D;*/
 
     .logout {
       width: 30px;
@@ -188,13 +195,12 @@
   }
 
   .username {
-    height: 60px;
-    line-height: 60px;
+    height: 40px;
+    line-height: 40px;
     cursor: pointer;
 
     .el-dropdown {
       color: #FFF;
     }
-
   }
 </style>

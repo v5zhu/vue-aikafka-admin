@@ -44,6 +44,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-size: 12px;
   }
 
   .bounce-enter-active {
