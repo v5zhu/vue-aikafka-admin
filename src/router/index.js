@@ -8,6 +8,7 @@ import { Login } from 'views/'
 import Adv from './adv/'
 import Function from './function/'
 import Dashboard from './dashboard/'
+import Article from './article/'
 import Demo from './demo/'
 import components from './components/'
 
@@ -28,6 +29,7 @@ export default new Router({
       component: Login
     },
     Dashboard,
+    Article,
     Function,
     Demo,
     components,
