@@ -8,7 +8,7 @@
         <el-col :span="24">
           <el-menu
             class="el-menu-vertical-demo"
-            theme="dark"
+            theme="light"
             :default-active="$route.path"
             unique-opened
             router>
@@ -22,7 +22,7 @@
                   slot="title">
                   <el-tooltip
                     class="item"
-                    effect="dark"
+                    effect="light"
                     placement="right"
                     :disabled="$store.state.leftmenu.menu_flag"
                     :content="item.name">
@@ -44,7 +44,7 @@
                   :index='$store.state.router.headerCurRouter+"/"+item.path+"/"+child.path'>
                   <el-tooltip
                     class="item"
-                    effect="dark"
+                    effect="light"
                     placement="right"
                     :disabled="$store.state.leftmenu.menu_flag"
                     :content="child.name">

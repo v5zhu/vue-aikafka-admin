@@ -6,7 +6,7 @@
         <el-col :span="4" class='logo-container'>&nbsp;
         </el-col>
         <el-col :span="16" class="head-nav-title">
-          <el-menu theme="light" :default-active="$store.state.router.headerCurRouter" class="el-menu-demo"
+          <el-menu theme="light" :default-active="$store.state.router.headerCurRouter" class="el-menu-demo head-nav-title-border-bottom"
                    mode="horizontal" unique-opened router>
             <!-- v-if='!item.hidden && (($store.state.user.userinfo.access_status===1 && $store.state.user.userinfo.web_routers[item.path]) || $store.state.user.userinfo.access_status!==1)' -->
             <el-menu-item class="el-menu-item"
@@ -157,8 +157,8 @@
 
   .el-menu-item {
     /*调整header-nav的高度和字体*/
-    height: 40px;
-    line-height: 40px;
+    height: 39px;
+    line-height: 39px;
     font-size: 12px;
   }
 
@@ -177,7 +177,7 @@
     left: 0px;
     z-index: 99;
     color: #FFF;
-    /*border-bottom: 1px solid #1F2D3D;*/
+    border-bottom: 1px solid #dcdfe4;
 
     .logout {
       width: 30px;
@@ -188,6 +188,9 @@
       cursor: pointer;
     }
 
+  }
+  .head-nav-title-border-bottom{
+    border-bottom: 1px solid #dcdfe4;
   }
 
   .userinfo {
