@@ -89,7 +89,7 @@ export default {
     },
 
     onLogin (ref, type) {
-      this.$router.push('/function/open/echarts')
+      this.$router.push('/dashboard/overview')
 
       if (type && this.register === true) {
         this.$message.error('请输入确认密码')

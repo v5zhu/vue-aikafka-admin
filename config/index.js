@@ -28,11 +28,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/slsAdminApi': {
-        target: 'http://php.api.slsadmin.com',
+      '/zhuxl': {
+        target: 'http://localhost:8080',
         changeOrigin: true,
         pathRewrite: {
-          '^/slsAdminApi': ''
+          '^/sonnx': ''
         }
       }
       // '/slsAdminQiniu': {

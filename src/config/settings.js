@@ -1,5 +1,5 @@
 var gbs = {
-  host: '/slsAdminApi', // 接口根地址。本地代理到slsadmin.api.sls.com,线上使用的是Nginx代理
+  host: '/zhuxl', // 接口根地址。本地代理到slsadmin.api.sls.com,线上使用的是Nginx代理
   db_prefix: 'sls_admin_', // 本地存储的key
 
   // 状态码字段
