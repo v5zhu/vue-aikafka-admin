@@ -1,16 +1,13 @@
-/**
- .
- */
 import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)
 
-// import { Home } from 'layout/'
 import { Login } from 'views/'
 
 import Adv from './adv/'
 import Function from './function/'
+import Dashboard from './dashboard/'
 import Demo from './demo/'
 import components from './components/'
 
@@ -30,6 +27,7 @@ export default new Router({
       hidden: true,
       component: Login
     },
+    Dashboard,
     Function,
     Demo,
     components,
